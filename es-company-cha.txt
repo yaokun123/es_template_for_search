@@ -75,8 +75,14 @@ GET _scripts/company_cha
                         "slop":1,
 			"boost":1
 		  }
-	      }
-          }],
+	      }},
+	      "match_phrase":{
+                  "companyName":{
+                      "query":"{{query_string}}",
+                      "slop":1
+                  }
+              }}
+	  ],
 	  {{/query_string}}
           "filter":{
             "bool":{
