@@ -13,7 +13,7 @@ GET _scripts/only_name_tmp
           "query":{
             "multi_match":{
               "query": "{{query_string}}",
-              "fields": ["companyName^10","historyName^10","creditNo"],
+              "fields": ["companyName^20","historyName^10","creditNo"],
               "minimum_should_match":"4<80% 5<90% 10<95%",
               "tie_breaker":0.1
             }

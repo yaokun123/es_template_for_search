@@ -140,7 +140,22 @@ PUT company_all
           },
           "hasClears":{
             "type": "boolean"
-          }
+          },
+          "hasRiskAnnouncementList":{
+	    "type":"boolean"
+	  },
+	  "hasRiskCourtNoticeList":{
+	    "type":"boolean"
+	  },
+	  "hasRiskLawsuitList":{
+	    "type":"boolean"
+	  },
+	  "hasRiskZhixing":{
+	    "type":"boolean"
+	  },
+	  "hasExecutedPerson":{
+	    "type":"boolean"
+	  }
         }
     }
   }
