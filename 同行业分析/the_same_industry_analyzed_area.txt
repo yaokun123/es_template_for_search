@@ -1,0 +1,36 @@
+GET _scripts/the_same_industry_analyzed_area
+{
+  "script":{
+    "lang":"mustache",
+    "source":"""
+    {
+      "size": 0,
+      "aggs":{
+        "group_count":{
+          "terms":{
+            "field": "{{query_string}}",
+            "show_term_doc_count_error": true,
+            "size": 500
+          },
+          "aggs":{
+            "capital_count": {
+              "terms":{
+                "field":"province",
+                "show_term_doc_count_error": true,
+                "size": 50
+              },
+              "aggs":{
+                "area_sum":{
+                  "sum":{
+                    "field":"capitalNumber"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    """
+  }
+}

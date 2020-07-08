@@ -1,0 +1,37 @@
+GET _scripts/the_same_industry_analyzed_establish_date_province
+{
+  "script":{
+    "lang":"mustache",
+    "source":"""
+    {
+      "size": 0,
+      "aggs":{
+        "group_count":{
+          "filter":{
+            "term":{
+              "province":"{{province}}"
+            }
+          },
+          "aggs":{
+            "capital_count":{
+              "terms":{
+                "field": "{{query_string}}",
+                "show_term_doc_count_error": true,
+                "size": 500
+              },
+              "aggs":{
+                "capital_group":{
+                  "range":{
+                    "field": "establishDate",
+                    "ranges":{{#toJson}}range_date{{/toJson}}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    """
+  }
+}

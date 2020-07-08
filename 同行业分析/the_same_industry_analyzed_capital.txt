@@ -1,0 +1,41 @@
+GET _scripts/the_same_industry_analyzed_capital
+{
+  "script":{
+    "lang":"mustache",
+    "source":"""
+    {
+      "size": 0,
+      "aggs":{
+        "group_count":{
+          "terms":{
+            "field": "{{query_string}}",
+            "show_term_doc_count_error": true,
+            "size": 2000
+          },
+          "aggs":{
+            "capital_count": {
+              "range":{
+                "field": "capitalNumber",
+                "ranges":[
+                  {"to": 10},
+                  {"from": 10,"to": 100},
+                  {"from": 100,"to":1000},
+                  {"from": 1000,"to":5000},
+                  {"from": 5000}
+                  ]
+              },
+              "aggs":{
+                "capital_sum":{
+                  "sum":{
+                    "field": "capitalNumber"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    """
+  }
+}

@@ -1,5 +1,5 @@
 #新建索引
-PUT company_all
+PUT company_new
 {
   "settings": {
       "index" : {
@@ -152,6 +152,12 @@ PUT company_all
 	  },
 	  "hasRiskZhixing":{
 	    "type":"boolean"
+	  },
+	  "companyStatusStr":{
+	    "type": "keyword"
+	  },
+	  "companyTypeStr":{
+	    "type": "keyword"
 	  }
         }
     }

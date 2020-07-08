@@ -1,0 +1,28 @@
+GET _scripts/the_same_industry_analyzed_establish_date
+{
+  "script":{
+    "lang":"mustache",
+    "source":"""
+    {
+      "size": 0,
+      "aggs":{
+        "group_count":{
+          "terms":{
+            "field": "{{query_string}}",
+            "show_term_doc_count_error": true,
+            "size": 2000
+          },
+          "aggs":{
+            "capital_count": {
+              "range":{
+                "field": "establishDate",
+                "ranges":{{#toJson}}range_date{{/toJson}}
+              }
+            }
+          }
+        }
+      }
+    }
+    """
+  }
+}
