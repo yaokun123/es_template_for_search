@@ -25,8 +25,8 @@ GET _scripts/company_cha_tmp
               "query":{
                 "multi_match":{
                   "query":"{{query_string}}",
-                  "fields":{{#toJson}}searchFields{{/toJson}}{{^searchFields}}["companyName^10","companyNameStr^25","historyName^10","companyDesc^4","businessScope","employeeName","legalPerson^4","product^5","trademark^2","companyAddress","partnerStockName","creditNo^25"]{{/searchFields}},
-                  "minimum_should_match":"4<80% 5<90% 10<95%",
+                  "fields":{{#toJson}}searchFields{{/toJson}}{{^searchFields}}["companyName^10","companyNameStr^25","historyName^8","companyDesc^4","businessScope","employeeName","legalPerson^4","product^5","trademark^2","companyAddress","partnerStockName","creditNo^25"]{{/searchFields}},
+                  "minimum_should_match":"2<85% 4<90%",
                   "tie_breaker":0.1
                 }
               },
@@ -191,6 +191,30 @@ GET _scripts/company_cha_tmp
                   }
                 }
                 {{/cid2}}
+		{{#industryL1Name}}
+		,
+		{
+		  "term":{
+		    "industryL1Name":"{{industryL1Name}}"
+		  }
+		}
+		{{/industryL1Name}}
+		{{#industryL2Name}}
+		,
+		{
+		  "term":{
+		    "industryL2Name":"{{industryL2Name}}"
+		  }
+		}
+		{{/industryL2Name}}
+		{{#industryL3Name}}
+		,
+		{
+		  "term":{
+		    "industryL3Name":"{{industryL3Name}}"
+		  }
+		}
+		{{/industryL3Name}}
                 {{#useHasContact}}
                 ,
                 {

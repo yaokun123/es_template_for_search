@@ -1,0 +1,76 @@
+#新建索引
+PUT risk_shixin
+{
+  "settings": {
+      "index" : {
+        "number_of_shards" :   4,
+        "number_of_replicas" : 1
+      },
+      "analysis":{
+	"analyzer":{
+	  "my_analyzer":{
+	    "tokenizer":"my_tokenizer"
+	  }
+	},
+	"tokenizer":{
+	  "my_tokenizer":{
+	    "type":"ngram",
+	    "min_gram":1,
+	    "max_gram":1,
+	    "token_chars":["letter","digit"]
+	  }
+	}
+      }
+  },
+  "mappings": {
+      "_doc": {
+        "properties":{
+          "iName":{
+            "type":"text",
+            "analyzer":"ik_max_word"
+          },
+	  "partyType":{
+            "type": "integer"
+          },
+	  "cardNum":{
+            "type":"text",
+            "analyzer":"my_analyzer"
+          },
+	  "historyName":{
+            "type":"text",
+            "analyzer":"ik_max_word"
+          },
+	  "province":{
+            "type":"keyword"
+          },
+	  "publishDate":{
+            "type":"integer"
+          },
+	  "birthday":{
+            "type":"integer"
+          },
+	  "sex":{
+            "type":"integer"
+          },
+	  "num_count":{
+            "type":"integer"
+          },
+	  "digest":{
+            "type":"keyword"
+          },
+	  "legalPerson":{
+            "type":"keyword"
+          },
+	  "capitalNumber":{
+            "type":"keyword"
+          },
+	  "establishDate":{
+            "type":"keyword"
+          },
+	  "pids":{
+            "type":"keyword"
+          }
+        }
+    }
+  }
+}
