@@ -1,4 +1,4 @@
-GET _scripts/company_more
+GET _scripts/company_more_tmp
 {
   "script":{
     "lang":"mustache",
@@ -81,6 +81,38 @@ GET _scripts/company_more
                 }
               }
               {{/usecompanyTypeStr}}
+              {{#useestablishDate}}
+              ,
+              {
+                "bool":{
+                  "should":{{#toJson}}establish_date_should{{/toJson}}
+                }
+              }
+              {{/useestablishDate}}
+              {{#usecapital}}
+              ,
+              {
+                "bool":{
+                  "should":{{#toJson}}capital_should_list{{/toJson}}
+                }
+              }
+              {{/usecapital}}
+              {{#usearea}}
+              ,
+              {
+                "bool":{
+                  "should":{{#toJson}}area_should_list{{/toJson}}
+                }
+              }
+              {{/usearea}}
+              {{#useindustry}}
+              ,
+              {
+                "bool":{
+                  "should":{{#toJson}}industry_should_list{{/toJson}}
+                }
+              }
+              {{/useindustry}}
               {{#useHasContact}}
                 ,
                 {
@@ -194,10 +226,6 @@ GET _scripts/company_more
                 }
                 {{/useHasTax}}
               ]
-              {{#useshould}}
-              ,
-              "should":{{#toJson}}should{{/toJson}}
-              {{/useshould}}
             }
           }
         }
