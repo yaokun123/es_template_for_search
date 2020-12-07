@@ -1,4 +1,5 @@
-PUT company
+#新建索引
+PUT company_all
 {
   "settings": {
       "index" : {
@@ -11,35 +12,43 @@ PUT company
         "properties":{
           "companyName":{
             "type":"text",
-            "analyzer":"ik_max_word"
+            "analyzer":"ik_max_word",
+	    "search_analyzer":"ik_smart"
           },
           "partnerStockName":{
             "type":"text",
-            "analyzer": "ik_max_word"
+            "analyzer": "ik_max_word",
+	    "search_analyzer":"ik_smart"
           },
           "companyDesc":{
             "type":"text",
-            "analyzer": "ik_max_word"
+            "analyzer": "ik_max_word",
+	    "search_analyzer":"ik_smart"
           },
           "businessScope":{
             "type":"text",
-            "analyzer": "ik_max_word"
+            "analyzer": "ik_max_word",
+	    "search_analyzer":"ik_smart"
           },
           "product":{
             "type":"text",
-            "analyzer": "ik_max_word"
+            "analyzer": "ik_max_word",
+	    "search_analyzer":"ik_smart"
           },
           "trademark":{
             "type":"text",
-            "analyzer": "ik_max_word"
+            "analyzer": "ik_max_word",
+	    "search_analyzer":"ik_smart"
           },
           "companyAddress":{
             "type":"text",
-            "analyzer": "ik_max_word"
+            "analyzer": "ik_max_word",
+	    "search_analyzer":"ik_smart"
           },
           "historyName":{
             "type":"text",
-            "analyzer": "ik_max_word"
+            "analyzer": "ik_max_word",
+	    "search_analyzer":"ik_smart"
           },
           "legalPerson":{
             "type":"keyword"
@@ -59,7 +68,7 @@ PUT company
           "prefectureCity":{
             "type": "keyword"
           },
-          "hasContact":{
+	  "hasContact":{
             "type": "boolean"
           },
           "cid":{
@@ -94,7 +103,158 @@ PUT company
           },
           "companyNameStr":{
             "type": "keyword"
-          }
+          },
+	  "hasEntPatentInfo":{
+            "type": "boolean"
+          },
+	  "hasEmail":{
+	    "type": "boolean"
+	  },
+          "lastChangeDate":{
+            "type":"integer"
+          },
+          "icpTime":{
+            "type":"integer"
+          },
+          "hasWebsites":{
+            "type": "boolean"
+          },
+	  "hasTax":{
+            "type": "boolean"
+          },
+          "hasTrademark":{
+            "type": "boolean"
+          },
+          "hasExecutedPerson":{
+            "type": "boolean"
+          },
+          "hasCopyrightWorks":{
+            "type": "boolean"
+          },
+          "hasCopyrightReg":{
+            "type": "boolean"
+          },
+	  "hasInsuranceAmount":{
+            "type": "boolean"
+          },
+          "hasCompanyBid":{
+            "type": "boolean"
+          },
+          "hasCompanyCustomsBusinessCredit":{
+            "type": "boolean"
+          },
+          "hasChattels":{
+            "type": "boolean"
+          },
+          "hasClears":{
+            "type": "boolean"
+          },
+          "hasRiskAnnouncementList":{
+	    "type":"boolean"
+	  },
+	  "hasRiskCourtNoticeList":{
+	    "type":"boolean"
+	  },
+	  "hasRiskLawsuitList":{
+	    "type":"boolean"
+	  },
+	  "hasRiskZhixing":{
+	    "type":"boolean"
+	  },
+	  "companyStatusStr":{
+	    "type": "keyword"
+	  },
+	  "companyTypeStr":{
+	    "type": "keyword"
+	  },
+	  "industryL1Name":{
+	    "type": "keyword"
+	  },
+	  "industryL2Name":{
+	    "type": "keyword"
+	  },
+	  "industryL3Name":{
+	    "type": "keyword"
+	  },
+	  "industryL4Name":{
+	    "type": "keyword"
+	  },
+	  "contactTags":{
+	    "type": "keyword"
+	  },
+	  "adWords":{
+	    "type": "keyword"
+	  },
+	  "websiteTitle":{
+	    "type": "text",
+	    "analyzer": "ik_max_word"
+	  },
+	  "websiteKeywords":{
+	    "type": "text",
+	    "analyzer": "ik_max_word"
+	  },
+	  "hasRecruitEmployees":{
+	    "type": "boolean"
+	  },
+	  "recruitEmployees":{
+	    "type": "text",
+	    "analyzer": "ik_max_word"
+	  },
+	  "patentNames":{
+	    "type": "text",
+	    "analyzer": "ik_max_word"
+	  },
+	  "trademarkService":{
+	    "type": "text",
+	    "analyzer": "ik_max_word"
+	  },
+	  "hasPhone":{
+	    "type": "boolean"
+	  },
+	  "insuranceAmountNum":{
+            "type":"integer"
+          },
+	  "hasAdministrativePunishment":{
+	    "type": "boolean"
+	  },
+	  "hasChangeInfo":{
+	    "type": "boolean"
+	  },
+	  "district":{
+	    "type": "keyword"
+	  },
+	  "websiteName":{
+	    "type": "text",
+	    "analyzer": "ik_max_word"
+	  },
+	  "websiteDomain":{
+	    "type": "keyword"
+	  },
+	  "hasAd":{
+	    "type" : "boolean"
+	  },
+	  "mainProduct":{
+	    "type": "text",
+	    "analyzer": "ik_max_word"
+	  },
+	  "hasExecutes":{
+	    "type" : "boolean"
+	  },
+	  "hasIllegals":{
+	    "type" : "boolean"
+	  },
+	  "hasOperations":{
+	    "type" : "boolean"
+	  },
+	  "webContact":{
+	    "type" : "boolean"
+	  },
+	  "kpContact":{
+	    "type" : "boolean"
+	  },
+	  "adMedia":{
+	    "type": "keyword"
+	  }
         }
     }
   }
