@@ -254,6 +254,12 @@ PUT company_all
 	  },
 	  "adMedia":{
 	    "type": "keyword"
+	  },
+	  "employeeAmountNum":{
+	    "type":"integer"
+	  },
+	  "businessIncomeNum":{
+	    "type":"integer"
 	  }
         }
     }
