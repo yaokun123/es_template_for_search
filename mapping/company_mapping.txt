@@ -260,7 +260,10 @@ PUT company_all
 	  },
 	  "businessIncomeNum":{
 	    "type":"integer"
-	  }
+	  },
+	  "companyCode":{
+            "type": "keyword"
+          }
         }
     }
   }
