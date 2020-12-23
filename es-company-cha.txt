@@ -66,7 +66,8 @@ GET _scripts/company_cha_tmp
               "match_phrase":{
                   "historyName":{
                       "query":"{{query_string}}",
-                      "slop":1
+                      "slop":1,
+		      "boost":10
                   }
               }},
               {
