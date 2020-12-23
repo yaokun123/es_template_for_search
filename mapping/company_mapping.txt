@@ -1,14 +1,17 @@
 #新建索引
-PUT company_all
+PUT company_all_new
 {
   "settings": {
       "index" : {
-        "number_of_shards" :   4,
+        "number_of_shards" :   5,
         "number_of_replicas" : 1
       }
   },
   "mappings": {
       "_doc": {
+	"_all":{
+	  "enabled": false
+	},
         "properties":{
           "companyName":{
             "type":"text",
