@@ -15,43 +15,35 @@ PUT company_all_new
         "properties":{
           "companyName":{
             "type":"text",
-            "analyzer":"ik_max_word",
-	    "search_analyzer":"ik_smart"
+            "analyzer":"ik_max_word"
           },
           "partnerStockName":{
             "type":"text",
-            "analyzer": "ik_max_word",
-	    "search_analyzer":"ik_smart"
+            "analyzer": "ik_max_word"
           },
           "companyDesc":{
             "type":"text",
-            "analyzer": "ik_max_word",
-	    "search_analyzer":"ik_smart"
+            "analyzer": "ik_max_word"
           },
           "businessScope":{
             "type":"text",
-            "analyzer": "ik_max_word",
-	    "search_analyzer":"ik_smart"
+            "analyzer": "ik_max_word"
           },
           "product":{
             "type":"text",
-            "analyzer": "ik_max_word",
-	    "search_analyzer":"ik_smart"
+            "analyzer": "ik_max_word"
           },
           "trademark":{
             "type":"text",
-            "analyzer": "ik_max_word",
-	    "search_analyzer":"ik_smart"
+            "analyzer": "ik_max_word"
           },
           "companyAddress":{
             "type":"text",
-            "analyzer": "ik_max_word",
-	    "search_analyzer":"ik_smart"
+            "analyzer": "ik_max_word"
           },
           "historyName":{
             "type":"text",
-            "analyzer": "ik_max_word",
-	    "search_analyzer":"ik_smart"
+            "analyzer": "ik_max_word"
           },
           "legalPerson":{
             "type":"keyword"
