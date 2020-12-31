@@ -67,7 +67,7 @@ GET _scripts/company_cha_tmp
                   "historyName":{
                       "query":"{{query_string}}",
                       "slop":1,
-		      "boost":8
+		      "boost":2
                   }
               }},
               {
