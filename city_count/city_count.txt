@@ -1,0 +1,19 @@
+GET _scripts/city_count
+{
+  "script":{
+    "lang":"mustache",
+    "source":"""
+    {
+      "size": 0,
+      "aggs":{
+	"city_count":{
+	  "terms":{
+	    "field":"prefectureCity",
+	    "size": 1000
+	  }
+	}
+      }
+    }
+    """
+  }
+}
