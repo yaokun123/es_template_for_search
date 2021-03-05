@@ -6,6 +6,7 @@ GET _scripts/company_cha
     "source":
     """
     {
+      timeout":"2000ms",
       "from":{{from}}{{^from}}0{{/from}},
       "size":{{size}}{{^size}}10{{/size}},
       "track_total_hits":true,
