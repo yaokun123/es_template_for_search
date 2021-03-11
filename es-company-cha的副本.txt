@@ -226,6 +226,14 @@ GET _scripts/company_cha
                   }
                 }
                 {{/useHasContact}}
+		{{#useHasPhone}}
+                ,
+                {
+                  "term":{
+                    "hasPhone":{{hasPhone}}
+                  }
+                }
+                {{/useHasPhone}}
 		{{#useHasEmail}}
                 ,
                 {
