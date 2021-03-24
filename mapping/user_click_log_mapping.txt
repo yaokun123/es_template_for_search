@@ -1,0 +1,41 @@
+#新建索引
+PUT user_click_log
+{
+  "settings": {
+      "index" : {
+        "number_of_shards" :   5,
+        "number_of_replicas" : 1
+      }
+  },
+  "mappings": {
+      "_doc": {
+	"_all":{
+	  "enabled": false
+	},
+        "properties":{
+          "Digest":{
+            "type":"keyword"
+          },
+          "UserId":{
+            "type":"integer"
+          },
+          "Date":{
+            "type":"date",
+	    "format":"yyyy-MM-dd HH:mm:ssZ"
+          },
+          "Position":{
+            "type": "keyword"
+          },
+          "Group":{
+            "type": "keyword"
+          },
+	  "WhereFrom":{
+            "type": "keyword"
+          },
+	  "VipLevel":{
+            "type": "integer"
+          }
+        }
+    }
+  }
+}

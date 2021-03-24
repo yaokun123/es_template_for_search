@@ -1,0 +1,32 @@
+#新建索引
+PUT user_search_log
+{
+  "settings": {
+      "index" : {
+        "number_of_shards" :   5,
+        "number_of_replicas" : 1
+      }
+  },
+  "mappings": {
+      "_doc": {
+	"_all":{
+	  "enabled": false
+	},
+        "properties":{
+          "UserId":{
+            "type":"integer"
+          },
+          "Date":{
+            "type":"date",
+	    "format":"yyyy-MM-dd HH:mm:ssZ"
+          },
+	  "VipLevel":{
+            "type": "integer"
+          },
+	  "WhereFrom":{
+	    "type":"keyword"
+	  }
+        }
+    }
+  }
+}
