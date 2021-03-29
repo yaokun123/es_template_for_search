@@ -258,7 +258,11 @@ PUT company_all_new
 	  },
 	  "companyCode":{
             "type": "keyword"
-          }
+          },
+	  "CompanyBidTitle":{
+	    "type": "text",
+	    "analyzer": "ik_max_word"
+	  }
         }
     }
   }
