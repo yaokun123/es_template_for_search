@@ -262,6 +262,34 @@ PUT company_all_new
 	  "CompanyBidTitle":{
 	    "type": "text",
 	    "analyzer": "ik_max_word"
+	  },
+	  "nAdWord":{
+	    "analyzer": "ik_max_word",
+	    "type": "text",
+	     "fields":{
+		"raw":{
+		  "type": "keyword"
+		}
+	     }
+	  },
+	  "nAdTitle":{
+	    "type": "text",
+            "analyzer": "ik_max_word"
+	  },
+	  "nAdPlatform":{
+	    "type": "keyword"
+	  },
+	  "nAdLinkCnt":{
+	    "type": "integer"
+	  },
+	  "nAdWordCnt":{
+	    "type": "integer"
+	  },
+	  "nAdLatestTime":{
+	    "type": "integer"
+	  },
+	  "hasNAd":{
+	    "type" : "boolean"
 	  }
         }
     }
