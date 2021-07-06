@@ -34,7 +34,10 @@ PUT user_click_log
           },
 	  "VipLevel":{
             "type": "integer"
-          }
+          },
+	  "Guid":{
+	    "type": "keyword"
+	  }
         }
     }
   }

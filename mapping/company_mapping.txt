@@ -290,6 +290,19 @@ PUT company_all_new
 	  },
 	  "hasNAd":{
 	    "type" : "boolean"
+	  },
+	  "nAdCompeteCnt":{
+	    "type": "integer"
+	  },
+	  "nAdRecordCnt":{
+	    "type": "integer"
+	  },
+	  "location":{
+	    "type": "geo_point"
+	  },
+	  "companyNameAli":{
+	    "type":"text",
+            "analyzer":"aliws"
 	  }
         }
     }
