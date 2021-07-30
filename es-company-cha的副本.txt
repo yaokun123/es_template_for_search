@@ -339,6 +339,14 @@ GET _scripts/company_cha
                   }
                 }
                 {{/useHasAd}}
+                {{#usewebContact}}
+		,
+		{
+		  "term":{
+		    "webContact":{{webContact}}
+		  }
+		}
+		{{/usewebContact}}
 		{{#useHasExecutedPerson}}
                 ,
                 {
