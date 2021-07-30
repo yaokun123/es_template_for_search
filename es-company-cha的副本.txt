@@ -347,6 +347,14 @@ GET _scripts/company_cha
 		  }
 		}
 		{{/usewebContact}}
+		{{#usekpContact}}
+		,
+		{
+		  "term":{
+		    "kpContact":{{kpContact}}
+		  }
+		}
+		{{/usekpContact}}
 		{{#useHasExecutedPerson}}
                 ,
                 {
