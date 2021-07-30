@@ -355,6 +355,14 @@ GET _scripts/company_cha
 		  }
 		}
 		{{/usekpContact}}
+		{{#useHasRecruitEmployees}}
+		,
+		{
+		  "term":{
+		    "hasRecruitEmployees":{{hasRecruitEmployees}}
+		  }
+		}
+		{{/useHasRecruitEmployees}}
 		{{#useHasExecutedPerson}}
                 ,
                 {
