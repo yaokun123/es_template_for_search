@@ -180,8 +180,11 @@ GET _scripts/company_more_tmp
 		{{#useHasInsuranceAmount}}
                 ,
                 {
-                  "term":{
-                    "hasInsuranceAmount":{{hasInsuranceAmount}}
+                  "range":{
+                    "insuranceAmountNum":{
+			"gte":{{insuranceAmountNumMin}},
+                        "lt":{{insuranceAmountNumMax}}
+		    }
                   }
                 }
                 {{/useHasInsuranceAmount}}
@@ -225,6 +228,54 @@ GET _scripts/company_more_tmp
                   }
                 }
                 {{/useHasTax}}
+		{{#usewebContact}}
+		,
+		{
+		  "term":{
+		    "webContact":{{webContact}}
+		  }
+		}
+		{{/usewebContact}}
+		{{#usekpContact}}
+		,
+		{
+		  "term":{
+		    "kpContact":{{kpContact}}
+		  }
+		}
+		{{/usekpContact}}
+		{{#useHasRecruitEmployees}}
+		,
+		{
+		  "term":{
+		    "hasRecruitEmployees":{{hasRecruitEmployees}}
+		  }
+		}
+		{{/useHasRecruitEmployees}}
+		{{#useHasOperations}}
+                ,
+                {
+                  "term":{
+                    "hasOperations":{{hasOperations}}
+                  }
+                }
+                {{/useHasOperations}}
+		{{#useHasAdministrativePunishment}}
+                ,
+                {
+                  "term":{
+                    "hasAdministrativePunishment":{{hasAdministrativePunishment}}
+                  }
+                }
+                {{/useHasAdministrativePunishment}}
+		{{#useHasAd}}
+                ,
+                {
+                  "term":{
+                    "hasAd":{{hasAd}}
+                  }
+                }
+                {{/useHasAd}}
               ]
             }
           }
