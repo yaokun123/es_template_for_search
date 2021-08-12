@@ -303,7 +303,67 @@ PUT company_all_new
 	  "companyNameAli":{
 	    "type":"text",
             "analyzer":"aliws"
-	  }
+	  },
+	  "hasIcCompanyAddress":{
+      	    "type": "boolean"
+    	  },
+	  "IcCompanyAddressDate":{
+      	    "type":"date",
+	    "format":"yyyy-MM-dd HH:mm:ssZ"
+    	  },
+	  "hasIcEmployee":{
+      	    "type": "boolean"
+    	  },
+	  "IcEmployeeDate":{
+      	    "type":"date",
+	    "format":"yyyy-MM-dd HH:mm:ssZ"
+    	  },
+	  "hasIcLegalPerson":{
+      	    "type": "boolean"
+    	  },
+	  "IcLegalPersonDate":{
+      	    "type":"date",
+	    "format":"yyyy-MM-dd HH:mm:ssZ"
+    	  },
+	  "hasIpIcp":{
+      	    "type": "boolean"
+    	  },
+	  "IpIcpDate":{
+            "type":"date",
+	    "format":"yyyy-MM-dd HH:mm:ssZ"
+    	  },
+	  "hasIcAbnormal":{
+      	    "type": "boolean"
+    	  },
+	  "IcAbnormalDate":{
+      	    "type":"date",
+	    "format":"yyyy-MM-dd HH:mm:ssZ"
+    	  },
+	  "hasIcPartner":{
+      	    "type": "boolean"
+    	  },
+	  "IcPartnerDate":{
+      	    "type":"date",
+	    "format":"yyyy-MM-dd HH:mm:ssZ"
+    	  },
+	  "hasContactPhone":{
+      	    "type": "boolean"
+    	  },
+	  "ContactPhoneDate":{
+      	    "type":"date",
+	    "format":"yyyy-MM-dd HH:mm:ssZ"
+    	  },
+	  "hasIpTm":{
+      	    "type": "boolean"
+    	  },
+	  "IpTmDate":{
+      	    "type":"date",
+	    "format":"yyyy-MM-dd HH:mm:ssZ"
+    	  },
+	  "MonitorNewDate":{
+      	    "type":"date",
+	    "format":"yyyy-MM-dd HH:mm:ssZ"
+    	  }
         }
     }
   }
