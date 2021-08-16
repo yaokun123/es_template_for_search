@@ -363,7 +363,11 @@ PUT company_all_new
 	  "MonitorNewDate":{
       	    "type":"date",
 	    "format":"yyyy-MM-dd HH:mm:ssZ"
-    	  }
+    	  },
+	  "LastUpdateTime":{
+	    "type":"date",
+	    "format":"yyyy-MM-dd HH:mm:ssZ"
+	  }
         }
     }
   }
