@@ -481,7 +481,7 @@ GET _scripts/company_cha_tmp
 	  "filter":{
 	    "range":{
 	      "IcCompanyAddressDate":{
-		"gte":"now-1M/d",
+		"gte":"now-1d",
 		"format": "yyyy-MM-dd HH:mm:ssZ"
 	      }
 	    }
@@ -491,7 +491,7 @@ GET _scripts/company_cha_tmp
 	  "filter":{
 	    "range":{
 	      "IcEmployeeDate":{
-		"gte":"now-1M/d",
+		"gte":"now-1d",
 		"format": "yyyy-MM-dd HH:mm:ssZ"
 	      }
 	    }
@@ -501,7 +501,7 @@ GET _scripts/company_cha_tmp
 	  "filter":{
 	    "range":{
 	      "IcLegalPersonDate":{
-		"gte":"now-1M/d",
+		"gte":"now-1d",
 		"format": "yyyy-MM-dd HH:mm:ssZ"
 	      }
 	    }
@@ -511,7 +511,7 @@ GET _scripts/company_cha_tmp
 	  "filter":{
 	    "range":{
 	      "IpIcpDate":{
-		"gte":"now-1M/d",
+		"gte":"now-1d",
 		"format": "yyyy-MM-dd HH:mm:ssZ"
 	      }
 	    }
@@ -521,7 +521,7 @@ GET _scripts/company_cha_tmp
 	  "filter":{
 	    "range":{
 	      "IcAbnormalDate":{
-		"gte":"now-1M/d",
+		"gte":"now-1d",
 		"format": "yyyy-MM-dd HH:mm:ssZ"
 	      }
 	    }
@@ -531,7 +531,7 @@ GET _scripts/company_cha_tmp
 	  "filter":{
 	    "range":{
 	      "IcPartnerDate":{
-		"gte":"now-1M/d",
+		"gte":"now-1d",
 		"format": "yyyy-MM-dd HH:mm:ssZ"
 	      }
 	    }
@@ -541,7 +541,7 @@ GET _scripts/company_cha_tmp
 	  "filter":{
 	    "range":{
 	      "ContactPhoneDate":{
-		"gte":"now-1M/d",
+		"gte":"now-1d",
 		"format": "yyyy-MM-dd HH:mm:ssZ"
 	      }
 	    }
@@ -551,7 +551,7 @@ GET _scripts/company_cha_tmp
 	  "filter":{
 	    "range":{
 	      "IpTmDate":{
-		"gte":"now-1M/d",
+		"gte":"now-1d",
 		"format": "yyyy-MM-dd HH:mm:ssZ"
 	      }
 	    }

@@ -37,7 +37,19 @@ PUT user_click_log
           },
 	  "Guid":{
 	    "type": "keyword"
-	  }
+	  },
+	  "Ext1":{
+            "type":"text",
+            "analyzer":"ik_max_word"
+          },
+	  "Ext2":{
+            "type":"text",
+            "analyzer":"ik_max_word"
+          },
+	  "Ext3":{
+            "type":"text",
+            "analyzer":"ik_max_word"
+          }
         }
     }
   }
