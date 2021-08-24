@@ -367,6 +367,14 @@ PUT company_all_new
 	  "LastUpdateTime":{
 	    "type":"date",
 	    "format":"yyyy-MM-dd HH:mm:ssZ"
+	  },
+	  "storageTime":{
+	    "type":"date",
+	    "format":"yyyy-MM-dd HH:mm:ssZ"
+	  },
+	  "IcBaseDate":{
+	    "type":"date",
+	    "format":"yyyy-MM-dd HH:mm:ssZ"
 	  }
         }
     }

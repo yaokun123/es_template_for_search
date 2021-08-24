@@ -556,6 +556,16 @@ GET _scripts/company_cha_tmp
 	      }
 	    }
 	  }
+	},
+	"IcBaseDate":{
+	  "filter":{
+	    "range":{
+	      "IcBaseDate":{
+		"gte":"now-1d",
+		"format": "yyyy-MM-dd HH:mm:ssZ"
+	      }
+	    }
+	  }
 	}
       }	
       {{/useAggs}}
@@ -572,14 +582,3 @@ GET _scripts/company_cha_tmp
     """
   }
 }
-
-
-
-
-
-
-
-  
-  
-  
-  
