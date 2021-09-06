@@ -375,6 +375,10 @@ PUT company_all_new
 	  "IcBaseDate":{
 	    "type":"date",
 	    "format":"yyyy-MM-dd HH:mm:ssZ"
+	  },
+	  "IcBusinessScope":{
+	    "type":"date",
+	    "format":"yyyy-MM-dd HH:mm:ssZ"
 	  }
         }
     }
