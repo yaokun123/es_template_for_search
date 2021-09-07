@@ -307,72 +307,91 @@ PUT company_all_new
 	  "hasIcCompanyAddress":{
       	    "type": "boolean"
     	  },
+	  "LastUpdateTime":{
+	    "type":"date",
+	    "format":"yyyy-MM-dd HH:mm:ssZ"
+	  },
 	  "IcCompanyAddressDate":{
       	    "type":"date",
 	    "format":"yyyy-MM-dd HH:mm:ssZ"
-    	  },
-	  "hasIcEmployee":{
-      	    "type": "boolean"
     	  },
 	  "IcEmployeeDate":{
       	    "type":"date",
 	    "format":"yyyy-MM-dd HH:mm:ssZ"
     	  },
-	  "hasIcLegalPerson":{
-      	    "type": "boolean"
-    	  },
 	  "IcLegalPersonDate":{
       	    "type":"date",
 	    "format":"yyyy-MM-dd HH:mm:ssZ"
-    	  },
-	  "hasIpIcp":{
-      	    "type": "boolean"
     	  },
 	  "IpIcpDate":{
             "type":"date",
 	    "format":"yyyy-MM-dd HH:mm:ssZ"
     	  },
-	  "hasIcAbnormal":{
-      	    "type": "boolean"
-    	  },
 	  "IcAbnormalDate":{
       	    "type":"date",
 	    "format":"yyyy-MM-dd HH:mm:ssZ"
-    	  },
-	  "hasIcPartner":{
-      	    "type": "boolean"
     	  },
 	  "IcPartnerDate":{
       	    "type":"date",
 	    "format":"yyyy-MM-dd HH:mm:ssZ"
     	  },
-	  "hasContactPhone":{
-      	    "type": "boolean"
-    	  },
 	  "ContactPhoneDate":{
       	    "type":"date",
 	    "format":"yyyy-MM-dd HH:mm:ssZ"
-    	  },
-	  "hasIpTm":{
-      	    "type": "boolean"
     	  },
 	  "IpTmDate":{
       	    "type":"date",
 	    "format":"yyyy-MM-dd HH:mm:ssZ"
     	  },
+	  "IcBaseDate":{
+	    "type":"date",
+	    "format":"yyyy-MM-dd HH:mm:ssZ"
+	  },
 	  "MonitorNewDate":{
       	    "type":"date",
 	    "format":"yyyy-MM-dd HH:mm:ssZ"
     	  },
-	  "LastUpdateTime":{
-	    "type":"date",
-	    "format":"yyyy-MM-dd HH:mm:ssZ"
-	  },
 	  "storageTime":{
 	    "type":"date",
 	    "format":"yyyy-MM-dd HH:mm:ssZ"
 	  },
-	  "IcBaseDate":{
+	  "IcCapitalDate":{
+	    "type":"date",
+	    "format":"yyyy-MM-dd HH:mm:ssZ"
+	  },
+	  "IcInvestDate":{
+	    "type":"date",
+	    "format":"yyyy-MM-dd HH:mm:ssZ"
+	  },
+	  "RiskCourtNoticeDate":{
+	    "type":"date",
+	    "format":"yyyy-MM-dd HH:mm:ssZ"
+	  },
+	  "RiskLawsuitDate":{
+	    "type":"date",
+	    "format":"yyyy-MM-dd HH:mm:ssZ"
+	  },
+	  "RiskCourtAnnouncementDate":{
+	    "type":"date",
+	    "format":"yyyy-MM-dd HH:mm:ssZ"
+	  },
+	  "RiskShixinDate":{
+	    "type":"date",
+	    "format":"yyyy-MM-dd HH:mm:ssZ"
+	  },
+	  "RiskZhixingDate":{
+	    "type":"date",
+	    "format":"yyyy-MM-dd HH:mm:ssZ"
+	  },
+	  "IpPatentDate":{
+	    "type":"date",
+	    "format":"yyyy-MM-dd HH:mm:ssZ"
+	  },
+	  "IpSoftDate":{
+	    "type":"date",
+	    "format":"yyyy-MM-dd HH:mm:ssZ"
+	  },
+	  "IpWorkDate":{
 	    "type":"date",
 	    "format":"yyyy-MM-dd HH:mm:ssZ"
 	  },
