@@ -51,6 +51,42 @@ PUT company_all_new
           "employeeName":{
             "type":"keyword"
           },
+	  "nBranchesName":{
+            "type":"text",
+      	    "analyzer": "ik_max_word",
+	    "fields":{
+	      "keyword":{
+	        "type": "keyword" 	
+	      }
+	    }
+          },
+	  "parentCompanyName":{
+            "type":"text",
+      	    "analyzer": "ik_max_word",
+	    "fields":{
+	      "keyword":{
+	        "type": "keyword" 	
+	      }
+	    }
+          },
+	  "foreignInvestmentName":{
+            "type":"text",
+      	    "analyzer": "ik_max_word",
+	    "fields":{
+	      "keyword":{
+	        "type": "keyword" 	
+	      }
+	    }
+          },
+	  "partnerCompanyStockName":{
+            "type":"text",
+      	    "analyzer": "ik_max_word",
+	    "fields":{
+	      "keyword":{
+	        "type": "keyword" 	
+	      }
+	    }
+          },
           "capitalNumber":{
             "type":"integer"
           },
