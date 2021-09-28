@@ -1,0 +1,47 @@
+#新建索引
+PUT company_tag_new
+{
+  "settings": {
+      "index" : {
+        "number_of_shards" :   5,
+        "number_of_replicas" : 0
+      }
+  },
+  "mappings": {
+      "_doc": {
+	"_all":{
+	  "enabled": false
+	},
+        "properties":{
+          "business_scope":{
+            "type":"text",
+            "analyzer":"ik_max_word"
+          },
+	  "business_scope_score":{
+            "type": "integer"
+          },
+          "business_scope_tags":{
+            "type":"keyword"
+          },
+	  "city":{
+            "type":"keyword"
+          },
+	  "company_name":{
+            "type":"text",
+            "analyzer":"ik_max_word"
+          },
+	  "establish_date":{
+	    "type":"date",
+	    "format":"yyyy-MM-dd HH:mm:ssZ"
+	  },
+	  "lastupdate":{
+	    "type":"date",
+	    "format":"yyyy-MM-dd HH:mm:ssZ"
+	  },
+	  "province":{
+            "type":"keyword"
+          }
+        }
+    }
+  }
+}

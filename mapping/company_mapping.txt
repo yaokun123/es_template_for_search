@@ -135,6 +135,9 @@ PUT company_all_new
           "companyNameStr":{
             "type": "keyword"
           },
+	  "historyNameStr":{
+            "type": "keyword"
+          },
 	  "hasEntPatentInfo":{
             "type": "boolean"
           },

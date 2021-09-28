@@ -26,7 +26,7 @@ GET _scripts/company_cha_tmp
                 "multi_match":{
                   "query":"{{query_string}}",
                   "fields":{{#toJson}}searchFields{{/toJson}}{{^searchFields}}["companyName^10","companyNameStr^25","historyName^8","companyDesc^4","businessScope","employeeName","legalPerson^4","product^5","trademark^2","companyAddress","partnerStockName","creditNo^25"]{{/searchFields}},
-                  "minimum_should_match":"2<70% 6<80% 10<-1",
+                  "minimum_should_match":"4<80% 5<90% 10<95%",
                   "tie_breaker":0.1
                 }
               },
