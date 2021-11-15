@@ -340,6 +340,9 @@ PUT company_all_new
 	    "type":"text",
             "analyzer":"aliws"
 	  },
+	  "companyMajorType":{
+	    "type": "long"
+	  },
 	  "hasIcCompanyAddress":{
       	    "type": "boolean"
     	  },
