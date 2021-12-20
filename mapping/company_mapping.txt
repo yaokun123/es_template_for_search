@@ -21,6 +21,18 @@ PUT company_all_new
             "type":"text",
             "analyzer": "ik_max_word"
           },
+	  "partnerPersonStockName":{
+            "type": "keyword" 
+          },
+	  "partnerCompanyStockName":{
+            "type":"text",
+      	    "analyzer": "ik_max_word",
+	    "fields":{
+	      "keyword":{
+	        "type": "keyword" 	
+	      }
+	    }
+          },
           "companyDesc":{
             "type":"text",
             "analyzer": "ik_max_word"
@@ -32,6 +44,15 @@ PUT company_all_new
           "product":{
             "type":"text",
             "analyzer": "ik_max_word"
+          },
+          "productFilterName":{
+            "type":"text",
+      	    "analyzer": "ik_max_word",
+	    "fields":{
+	      "keyword":{
+	        "type": "keyword" 	
+	      }
+	    }
           },
           "trademark":{
             "type":"text",
@@ -88,6 +109,9 @@ PUT company_all_new
 	    }
           },
           "capitalNumber":{
+            "type":"integer"
+          },
+	  "foreignInvestmentNameNum":{
             "type":"integer"
           },
           "establishDate":{
@@ -268,6 +292,9 @@ PUT company_all_new
 	    "type": "text",
 	    "analyzer": "ik_max_word"
 	  },
+	  "mainProductStr":{
+	    "type": "keyword"
+	  },
 	  "hasExecutes":{
 	    "type" : "boolean"
 	  },
@@ -346,6 +373,9 @@ PUT company_all_new
 	  "hasIcCompanyAddress":{
       	    "type": "boolean"
     	  },
+	  "stockStatus":{
+            "type":"integer"
+          },
 	  "LastUpdateTime":{
 	    "type":"date",
 	    "format":"yyyy-MM-dd HH:mm:ssZ"
