@@ -110,6 +110,26 @@ GET _scripts/company_cha_tmp
 	      {{/match_city}}
           ],
 	  {{/query_string}}
+	  {{#useCompanyStatusPeerStr}}
+	  "must_not":[{
+	    "term":{
+	      "companyStatusStr":"吊销"
+	    }
+	  },{
+	    "term":{
+	      "companyStatusStr":"注销"
+	    }
+	  },{
+	    "term":{
+	      "companyStatusStr":"迁出"
+	    }
+	  },{
+	    "term":{
+	      "companyStatusStr":"清算"
+	    } 
+	  }]
+	  ,
+	  {{/useCompanyStatusPeerStr}}
           "filter":{
             "bool":{
               "must":[
