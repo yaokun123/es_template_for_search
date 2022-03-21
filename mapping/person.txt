@@ -1,0 +1,55 @@
+PUT person
+{
+  "settings":{
+    "index":{
+      "number_of_shards" :   5,
+      "number_of_replicas" : 0
+    }
+  },
+  "mappings":{
+    "_doc":{
+      "enabled": false
+    },
+    "properties":{
+      "personName":{
+        "type":"keyword"
+      },
+      "acNum":{
+        "type":"integer"
+      },
+      "lpNum":{
+	"type":"integer"
+      },
+      "investNum":{
+        "type":"integer"
+      },
+      "employeeNum":{
+        "type":"integer"
+      },
+      "companyNum":{
+        "type":"integer"
+      },
+      "provinceList":{
+        "type":"keyword"
+      },
+      "cityList":{
+	"type":"keyword"
+      },
+      "industryL1NameList":{
+        "type":"keyword"
+      },
+      "industryL2NameList":{
+        "type":"keyword"
+      },
+      "industryL3NameList":{
+        "type":"keyword"
+      },
+      "industryL4NameList":{
+	"type":"keyword"
+      },
+      "areaDistribution":{
+        "type":"keyword"
+      }
+    }
+  }
+}
