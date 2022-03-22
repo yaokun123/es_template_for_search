@@ -8,9 +8,10 @@ PUT person
   },
   "mappings":{
     "_doc":{
-      "enabled": false
-    },
-    "properties":{
+      "_all":{
+        "enabled": false
+      },
+     "properties":{
       "personName":{
         "type":"keyword"
       },
@@ -24,9 +25,6 @@ PUT person
         "type":"integer"
       },
       "employeeNum":{
-        "type":"integer"
-      },
-      "companyNum":{
         "type":"integer"
       },
       "provinceList":{
@@ -50,6 +48,7 @@ PUT person
       "areaDistribution":{
         "type":"keyword"
       }
+    } 
     }
   }
 }
