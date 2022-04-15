@@ -24,15 +24,6 @@ PUT company_all_new
 	  "partnerPersonStockName":{
             "type": "keyword" 
           },
-	  "partnerCompanyStockName":{
-            "type":"text",
-      	    "analyzer": "ik_max_word",
-	    "fields":{
-	      "keyword":{
-	        "type": "keyword" 	
-	      }
-	    }
-          },
           "companyDesc":{
             "type":"text",
             "analyzer": "ik_max_word"
