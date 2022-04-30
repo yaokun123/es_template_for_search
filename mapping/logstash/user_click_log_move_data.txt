@@ -1,0 +1,28 @@
+# input插件需要监听Logstash进程所在节点的端口，请使用8000~9000范围内的端口。
+input {
+  elasticsearch {
+    hosts => ["http://es-cn-mp91b5qk9000iec2f.elasticsearch.aliyuncs.com:9200"]
+    user => "elastic"
+    password => "utn@0818"
+    index => "user_click_log"
+    docinfo => true
+    query => '{ "query": { "match_all": { } } }'
+    scroll => "20m"
+    size => 1000
+  }
+}
+filter {
+
+}
+output {
+  elasticsearch {
+    hosts => ["http://es-cn-7pp2o6h2800054qh5.elasticsearch.aliyuncs.com:9200"]
+    user => "elastic"
+    password => "utn@0818"
+    index => "user_click_log"
+    document_id => "%{[@metadata][_id]}"
+  }
+}
+
+
+# 注意开启调试信息需要安装插件

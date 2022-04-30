@@ -1,0 +1,67 @@
+GET _template
+GET _template/user-click-log-index-template
+DELETE _template/user-click-log-index-template
+
+
+PUT _template/user-click-log-index-template
+{
+  "index_patterns":["user-click-log-time-*"],
+  "settings":{
+      "number_of_shards":5,
+      "number_of_replicas":1,
+      "index.lifecycle.name":"user_click_log_policy",
+      "index.lifecycle.rollover_alias":"user-click-log-alias"
+    },
+    "mappings":{
+      "_doc":{
+        "_all":{
+          "enabled": false
+        },
+        "properties":{
+          "Digest":{
+            "type":"keyword"
+          },
+          "UserId":{
+            "type":"integer"
+          },
+          "Date":{
+            "type":"date",
+            "format":"yyyy-MM-dd HH:mm:ssZ"
+          },
+          "Position":{
+            "type": "keyword"
+          },
+          "Group":{
+            "type": "keyword"
+          },
+          "WhereFrom":{
+            "type": "keyword"
+          },
+          "VipLevel":{
+            "type": "integer"
+          },
+          "Guid":{
+            "type": "keyword"
+          }
+        }
+      }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+PUT %3Cuser-click-log-time-%7Bnow%2Fd%7D-000001%3E
+{
+  "aliases": {
+    "user-click-log-alias": {
+      "is_write_index":true
+    }
+  }
+}
