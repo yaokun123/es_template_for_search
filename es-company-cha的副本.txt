@@ -27,7 +27,7 @@ GET _scripts/company_cha_tmp
               "query":{
                 "multi_match":{
                   "query":"{{query_string}}",
-                  "fields":{{#toJson}}searchFields{{/toJson}}{{^searchFields}}["companyName^10","companyNameAli^10","companyNameStr^50","historyName^9","historyNameStr.keyword^40","companyDesc^4","businessScope","employeeName^3","legalPerson^10","productFilterName^8","productFilterName.keyword^40","trademark^2","companyAddress","partnerPersonStockName^8","partnerCompanyStockName^5","creditNo^25","companyCode^25"]{{/searchFields}},
+                  "fields":{{#toJson}}searchFields{{/toJson}}{{^searchFields}}["companyName^10","companyNameAli^10","companyNameStr^50","historyName^9","historyNameStr.keyword^40","companyDesc^4","businessScope","employeeName^3","legalPerson^10","productFilterName^8","productFilterName.keyword^40","trademark^2","companyAddress","partnerPersonStockName^8","partnerCompanyStockName^5","creditNo^25","companyCode^25","phoneList^50"]{{/searchFields}},
                   "minimum_should_match":"4<80% 5<90% 10<95%",
                   "tie_breaker":0.05
                 }
@@ -514,7 +514,8 @@ GET _scripts/company_cha_tmp
           "companyAddress":{},
 	  "creditNo":{},
 	  "partnerPersonStockName":{},
-	  "partnerCompanyStockName":{}
+	  "partnerCompanyStockName":{},
+          "phoneList":{}
         },
         "fragment_size":20
       }
