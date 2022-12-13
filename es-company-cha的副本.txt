@@ -212,6 +212,14 @@ GET _scripts/company_cha_tmp
 		  }
 		}
 		{{/companyTypeStr}}
+		{{#companyTags}}
+		,
+		{
+		  "term":{
+		    "companyTags.keyword":"{{companyTags}}"
+		  }
+		}
+		{{/companyTags}}
                 {{#cid}}
                 ,
                 {
