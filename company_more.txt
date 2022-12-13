@@ -81,6 +81,14 @@ GET _scripts/company_more_tmp
                 }
               }
               {{/usecompanyTypeStr}}
+	      {{#usecompanyTags}}
+	      ,
+	      {
+	        "terms":{
+		  "companyTags.keyword":{{#toJson}}companyTags{{/toJson}}
+		}
+	      }
+	      {{/usecompanyTags}}
               {{#useestablishDate}}
               ,
               {
