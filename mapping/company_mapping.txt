@@ -364,6 +364,9 @@ PUT company_all_new
 	  "hasIcCompanyAddress":{
       	    "type": "boolean"
     	  },
+	  "hasTicket":{
+      	    "type": "boolean"
+    	  },
 	  "stockStatus":{
             "type":"integer"
           },
