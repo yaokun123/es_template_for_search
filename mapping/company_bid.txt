@@ -1,0 +1,62 @@
+PUT company_bid
+{
+  "settings":{
+    "index":{
+      "number_of_shards" :   10,
+      "number_of_replicas" : 0
+    }
+  },
+  "mappings":{
+    "_doc":{
+      "_all":{
+        "enabled": false
+      },
+     "properties":{
+      "title":{
+        "type":"text",
+        "analyzer":"ik_max_word"
+      },
+      "publish_time":{
+        "type":"integer"
+      },
+      "province":{
+        "type":"keyword"
+      },
+      "notice_type":{
+	"type":"keyword"
+      },
+      "notice_type_sub":{
+        "type":"keyword"
+      },
+      "purchaser":{
+        "type":"text",
+	"analyzer":"ik_max_word"
+      },
+      "purchaser_map":{
+	"type":"keyword"
+      },
+      "bid_win":{
+        "type":"text",
+	"analyzer":"ik_max_word"
+      },
+      "bid_win_map":{
+	"type":"keyword"
+      },
+      "proxy":{
+	"type":"text",
+	"analyzer":"ik_max_word"
+      },
+      "proxy_map":{
+	"type":"keyword"
+      },
+      "other":{
+        "type":"text",
+	"analyzer":"ik_max_word"
+      },
+      "other_map":{
+	"type":"keyword"
+      }
+    } 
+    }
+  }
+}

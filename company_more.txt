@@ -137,6 +137,54 @@ GET _scripts/company_more_tmp
                   }
                 }
                 {{/useHasEmail}}
+		{{#usehasPhone}}
+                ,
+                {
+                  "term":{
+                    "hasPhone":{{hasPhone}}
+                  }
+                }
+                {{/usehasPhone}}
+		{{#usehasChangeInfo}}
+                ,
+                {
+                  "term":{
+                    "hasChangeInfo":{{hasChangeInfo}}
+                  }
+                }
+                {{/usehasChangeInfo}}
+		{{#usehasExecutes}}
+                ,
+                {
+                  "term":{
+                    "hasExecutes":{{hasExecutes}}
+                  }
+                }
+                {{/usehasExecutes}}
+		{{#usehasRiskCourtNoticeList}}
+                ,
+                {
+                  "term":{
+                    "hasRiskCourtNoticeList":{{hasRiskCourtNoticeList}}
+                  }
+                }
+                {{/usehasRiskCourtNoticeList}}
+		{{#usehasRiskAnnouncementList}}
+                ,
+                {
+                  "term":{
+                    "hasRiskAnnouncementList":{{hasRiskAnnouncementList}}
+                  }
+                }
+                {{/usehasRiskAnnouncementList}}
+		{{#usehasRiskLawsuitList}}
+                ,
+                {
+                  "term":{
+                    "hasRiskLawsuitList":{{hasRiskLawsuitList}}
+                  }
+                }
+                {{/usehasRiskLawsuitList}}
 		{{#useHasWebsites}}
                 ,
                 {
