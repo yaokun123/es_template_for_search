@@ -370,6 +370,9 @@ PUT company_all_new
 	  "stockStatus":{
             "type":"integer"
           },
+	  "rongziTag":{
+	    "type": "keyword"
+	  },
 	  "LastUpdateTime":{
 	    "type":"date",
 	    "format":"yyyy-MM-dd HH:mm:ssZ"

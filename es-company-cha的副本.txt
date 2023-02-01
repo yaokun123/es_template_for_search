@@ -219,7 +219,23 @@ GET _scripts/company_cha_tmp
 		    "companyTags.keyword":"{{companyTags}}"
 		  }
 		}
-		{{/companyTags}}
+	        {{/companyTags}}
+                {{#rongziTag}}
+	        ,
+	        {
+		  "term":{
+		    "rongziTag":"{{rongziTag}}"
+		  }
+	        }
+	        {{/rongziTag}}
+	        {{#stockTag}}
+	        ,
+		{
+		  "term":{
+		    "stockTag.keyword":"{{stockTag}}"
+		  }
+		}
+	        {{/stockTag}}
                 {{#cid}}
                 ,
                 {

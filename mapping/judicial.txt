@@ -1,0 +1,79 @@
+PUT judicial
+{
+  "settings":{
+    "index":{
+      "number_of_shards" :   10,
+      "number_of_replicas" : 0
+    }
+  },
+  "mappings":{
+    "_doc":{
+      "_all":{
+        "enabled": false
+      },
+     "properties":{
+      "p_n_list":{
+        "type":"text",
+	"analyzer": "ik_max_word",
+	"fields":{
+	  "keyword":{
+	    "type": "keyword" 	
+	  }
+	}
+      },
+      "p_n_d_list":{
+	"type":"keyword"
+      },
+      "p_n_map":{
+        "type":"keyword"
+      },
+      "title":{
+        "type":"text",
+        "analyzer":"ik_max_word"
+      },
+      "court_name_list":{
+        "type":"text",
+	"analyzer": "ik_max_word",
+	"fields":{
+	  "keyword":{
+	    "type": "keyword" 	
+	  }
+	}
+      },
+      "case_code_list":{
+        "type":"text",
+	"analyzer": "ik_max_word",
+	"fields":{
+	  "keyword":{
+	    "type": "keyword" 	
+	  }
+	}
+      },
+      "case_reason_list":{
+        "type":"keyword"
+      },
+      "type_tags_list":{
+        "type":"keyword"
+      },
+      "program_name":{
+        "type":"keyword"
+      },
+      "p_r_t_list_map":{
+        "type":"keyword"
+      },
+      "start_time":{
+        "type":"integer"
+      },
+      "dim_tags_list":{
+        "type":"integer"
+      },
+      "p_r_t_list":{
+        "type":"integer"
+      },
+      "program_start_time":{
+	"type":"integer"
+      }
+    } 
+    }
+  }
+}
