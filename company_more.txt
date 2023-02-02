@@ -89,6 +89,22 @@ GET _scripts/company_more_tmp
 		}
 	      }
 	      {{/usecompanyTags}}
+	      {{#userongziTag}}
+	      ,
+	      {
+		"terms":{
+		  "rongziTag":{{#toJson}}rongziTag{{/toJson}}
+		}
+	      }
+	      {{/userongziTag}}
+	      {{#usestockTags}}
+	      ,
+	      {
+		"terms":{
+		  "stockTags.keyword":{{#toJson}}stockTags{{/toJson}}
+		}
+	      }
+	      {{/usestockTags}}
               {{#useestablishDate}}
               ,
               {

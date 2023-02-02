@@ -228,14 +228,14 @@ GET _scripts/company_cha_tmp
 		  }
 	        }
 	        {{/rongziTag}}
-	        {{#stockTag}}
+	        {{#stockTags}}
 	        ,
 		{
 		  "term":{
-		    "stockTag.keyword":"{{stockTag}}"
+		    "stockTags.keyword":"{{stockTags}}"
 		  }
 		}
-	        {{/stockTag}}
+	        {{/stockTags}}
                 {{#cid}}
                 ,
                 {
