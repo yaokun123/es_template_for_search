@@ -29,13 +29,42 @@ GET _scripts/precise_match
                   "query":"{{query_string}}",
                   "fields":{{#toJson}}searchFields{{/toJson}}{{^searchFields}}["companyNameStr","historyNameStr.keyword"]{{/searchFields}}
                 }
-              }
+              },
 	      {{/query_string}}
 	      {{^query_string}}
 	      "query":{
 	        "match_all":{}
-	      }
+	      },
 	      {{/query_string}}
+	      "score_mode":"sum",
+              "boost_mode":"sum",
+              "functions":[{
+                "field_value_factor":{
+                  "field":"capitalNumber",
+                  "missing":0,
+                  "modifier":"log1p",
+                  "factor":0.1
+                },
+                "weight":30
+              },{
+                "field_value_factor":{
+                  "field":"companyStatus",
+                  "missing":0,
+                  "factor":100
+                }
+              },{
+                "field_value_factor":{
+                  "field":"companyType",
+                  "missing":0,
+                  "factor":100
+                }
+              },{
+                "field_value_factor":{
+                  "field":"stockStatus",
+                  "missing":0,
+                  "factor":80
+                }
+              }]
             }
           }
         }
